@@ -1,0 +1,27 @@
+name: Node.js CI
+
+on:
+    push:
+        branches:
+            - feature-adding-github-actions
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [12.x, 14.x, 16.x]
+
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+            - name: Instal dependencies
+              run: npm instal
+            - name: Lint
+              run: npm run eslint
