@@ -27,6 +27,7 @@
         "no-console": ["error"],
         "react/prop-types": ["error"],
         "import/no-absolute-path": ["off"],
+        "react-hooks/exhaustive-deps": "error",
         "max-len": ["error", { "code": 100 }],
         "react/require-default-props": ["warn"],
         "react/jsx-indent": ["error", 4],

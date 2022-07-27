@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { NavTabs } from './components';
+import { Container, Title, TitleText } from './styles';
+
 const Layout = ({ children }) => {
     return (
         <div>
-            <div>
-                <h1>Hacker News</h1>
-            </div>
-            <div>{children}</div>
+            <Title>
+                <TitleText>HACKER NEWS</TitleText>
+            </Title>
+            <NavTabs />
+            <Container>{children}</Container>
         </div>
     );
 };
